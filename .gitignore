@@ -1,0 +1,7 @@
+# Files
+*.log
+
+# Folders
+.gradle/
+.idea/
+build/

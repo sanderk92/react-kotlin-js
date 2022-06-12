@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url("images/background.jpg") center no-repeat;
+    background-size: cover;
+}
+
+/*
+    Layout
+ */
+
+#header {
+}
+
+#sidebar {
+    z-index: 1000;
+    overflow: hidden;
+    white-space: nowrap;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#main {
+    display: flex;
+    flex-grow: 1;
+}
+
+#content {
+    width: 100%;
+    margin: 50px;
+}
+
+/*
+    Reusable
+ */
+
+.bottom-border {
+    border-bottom: 1px solid #3f4a67;
+}
+
+.clickable:hover {
+    cursor: pointer;
+}
+
+.full-width {
+    min-width: 100%;
+}
+
+.break-word {
+    word-break: break-word;
+    white-space: pre-wrap;
+}
+
+@media only screen and (min-width: 769px) {
+    #sidebar {
+        transition: width 0.2s ease-in;
+    }
+
+    .sidebar-open {
+        width: 225px;
+    }
+
+    .sidebar-closed {
+        width: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #sidebar {
+        transition: height 0.5s ease;
+        position: absolute;
+        background: #d5d5d5;
+    }
+
+    .sidebar-open {
+        height: 100%;
+        width: 100%;
+    }
+
+    .sidebar-closed {
+        height: 0;
+        width: 0;
+    }
+}
