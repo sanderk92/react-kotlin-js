@@ -17,13 +17,15 @@
  */
 
 #header {
+    border-bottom: 1px solid #aaaaaa;
+
 }
 
 #sidebar {
     z-index: 1000;
     overflow: hidden;
     white-space: nowrap;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 #main {
@@ -34,6 +36,11 @@
 #content {
     width: 100%;
     margin: 50px;
+}
+
+#footer {
+    background: rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #aaaaaa;
 }
 
 /*
@@ -82,18 +89,15 @@
 
 @media only screen and (max-width: 768px) {
     #sidebar {
-        transition: height 0.5s ease-out;
         position: absolute;
-        background: #d5d5d5;
+        background: #d7d7d9;
     }
 
     .sidebar-open {
-        height: 100%;
         width: 100%;
     }
 
     .sidebar-closed {
-        height: 0;
         width: 0;
     }
 }

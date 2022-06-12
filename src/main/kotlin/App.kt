@@ -2,8 +2,12 @@ import kotlinx.browser.window
 import pages.IndexPage
 import react.Props
 import react.createElement
+import react.dom.html.ReactHTML.a
 import react.dom.html.ReactHTML.aside
+import react.dom.html.ReactHTML.div
+import react.dom.html.ReactHTML.footer
 import react.dom.html.ReactHTML.header
+import react.dom.html.ReactHTML.img
 import react.dom.html.ReactHTML.main
 import react.dom.html.ReactHTML.section
 import react.fc
@@ -40,6 +44,20 @@ val App = fc<Props> {
                     Route {
                         attrs.path = "/"
                         attrs.element = createElement(IndexPage)
+                    }
+                }
+            }
+
+        }
+        footer {
+            attrs.id = "footer"
+            attrs.className = "footer has-text-centered"
+
+            div {
+                attrs.className = "content"
+                a {
+                    img {
+                        attrs.src = "images/logo.svg"
                     }
                 }
             }

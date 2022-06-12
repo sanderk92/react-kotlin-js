@@ -1,8 +1,6 @@
 import react.Props
-import react.dom.html.ReactHTML.a
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.i
-import react.dom.html.ReactHTML.img
 import react.dom.html.ReactHTML.li
 import react.dom.html.ReactHTML.p
 import react.dom.html.ReactHTML.span
@@ -21,10 +19,10 @@ val SideBar = fc<Props> {
 
             p {
                 attrs.className = "menu-label p-1 has-text-dark"
-                +"Monitoring"
+                +"My label"
             }
             li {
-                attrs.className = "menu-item"
+                attrs.className = "menu-item px-2 py-1"
                 RouterLink {
                     attrs.path = "/"
                     attrs.value = "Home"
@@ -32,7 +30,7 @@ val SideBar = fc<Props> {
                 }
             }
             li {
-                attrs.className = "menu-item"
+                attrs.className = "menu-item px-2 py-1"
                 RouterLink {
                     attrs.path = "/unused1"
                     attrs.value = "Unused"
@@ -40,7 +38,7 @@ val SideBar = fc<Props> {
                 }
             }
             li {
-                attrs.className = "menu-item"
+                attrs.className = "menu-item px-2 py-1"
                 RouterLink {
                     attrs.path = "/unused2"
                     attrs.value = "Unused"
