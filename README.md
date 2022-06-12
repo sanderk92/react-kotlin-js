@@ -8,7 +8,7 @@ In order to run this application locally, execute the following command:
 ```
 
 The app will now open in your browser automatically. All requests to the backend api will be proxied to the localhost as 
-configured in webpack, where our backend service should be located.
+configured in webpack, where our backend service (if any) should be located.
 
 ## Production
 
