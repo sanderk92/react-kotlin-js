@@ -9,7 +9,7 @@ val Toaster = createContext(AwesomeNotifications(
     globalOptions = json(
         "maxNotifications" to 3,
         "durations" to json(
-            "global" to 10000
+            "global" to 3000
         )
     )
 ))

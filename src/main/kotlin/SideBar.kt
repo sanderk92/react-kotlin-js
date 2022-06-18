@@ -32,14 +32,6 @@ val SideBar = fc<Props> {
             li {
                 attrs.className = "menu-item py-1"
                 RouterLink {
-                    attrs.path = "/cards"
-                    attrs.value = "Cards"
-                    attrs.icon = "bx bx-card"
-                }
-            }
-            li {
-                attrs.className = "menu-item py-1"
-                RouterLink {
                     attrs.path = "/timeline"
                     attrs.value = "Timeline"
                     attrs.icon = "bx bx-time"
@@ -51,6 +43,14 @@ val SideBar = fc<Props> {
                     attrs.path = "/input"
                     attrs.value = "Input"
                     attrs.icon = "bx bx-search"
+                }
+            }
+            li {
+                attrs.className = "menu-item py-1"
+                RouterLink {
+                    attrs.path = "/cards"
+                    attrs.value = "Cards"
+                    attrs.icon = "bx bx-card"
                 }
             }
         }
