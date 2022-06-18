@@ -32,6 +32,5 @@ docker run -d -p 80:80 lorem-ipsum-ui:v1
 
   - [React](https://reactjs.org/docs/react-api.html)
   - [Kotlin-JS](https://kotlinlang.org/docs/js-get-started.html)
-  - [Github](https://github.com/JetBrains/kotlin-wrappers) 
-  - [Maven](https://mvnrepository.com/artifact/org.jetbrains.kotlin-wrappers)
+  - [Kotlin Wrappers](https://github.com/JetBrains/kotlin-wrappers) 
   - [Docs](https://bulma.io/documentation/)
