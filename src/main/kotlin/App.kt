@@ -67,13 +67,9 @@ val App = fc<Props> {
         footer {
             attrs.id = "footer"
             attrs.className = "footer has-text-centered"
-
-            div {
-                attrs.className = "content"
-                a {
-                    img {
-                        attrs.src = "images/logo.svg"
-                    }
+            a {
+                img {
+                    attrs.src = "images/logo.svg"
                 }
             }
         }

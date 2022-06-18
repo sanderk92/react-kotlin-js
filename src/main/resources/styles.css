@@ -25,6 +25,7 @@
     overflow: hidden;
     white-space: nowrap;
     background: rgba(0, 0, 0, 0.05);
+    transition: width 0.1s ease-out;
 }
 
 #main {
@@ -88,10 +89,6 @@
  */
 
 @media only screen and (min-width: 769px) {
-    #sidebar {
-        transition: width 0.1s ease-out;
-    }
-
     .sidebar-open {
         width: 225px;
     }
@@ -102,10 +99,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-    #sidebar {
-        transition: width 0.1s ease-out;
-    }
-
     .sidebar-open {
         width: 50%;
     }

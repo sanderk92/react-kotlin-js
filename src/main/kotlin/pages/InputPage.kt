@@ -22,7 +22,8 @@ val InputPage = fc<Props> {
     div {
         attrs.className = "columns is-centered"
         div {
-            attrs.className = "column card is-narrow has-text-centered background-opaque"
+            attrs.className = "column box is-narrow has-text-centered"
+
             div {
                 attrs.className = "p-4"
                 DatePicker {

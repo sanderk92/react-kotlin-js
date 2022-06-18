@@ -14,7 +14,7 @@ external interface CardProps : Props {
 val Card = fc<CardProps> { props ->
 
     div {
-        attrs.className = "card opaque-hoverable clickable"
+        attrs.className = "card opaque-hover clickable"
         div {
             attrs.className = "card-image"
             figure {

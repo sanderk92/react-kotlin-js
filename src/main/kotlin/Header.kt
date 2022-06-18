@@ -1,8 +1,10 @@
 import react.Props
+import react.dom.html.ReactHTML
 import react.dom.html.ReactHTML.a
 import react.dom.html.ReactHTML.button
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.i
+import react.dom.html.ReactHTML.img
 import react.dom.html.ReactHTML.nav
 import react.fc
 
@@ -24,6 +26,22 @@ val Header = fc<HeaderProps> { props ->
                     attrs.className = "icon mx-1 has-text-light"
                     i {
                         attrs.className = if (props.sideBarOpen) "bx bx-x" else "bx bx-menu"
+                    }
+                }
+            }
+        }
+
+        div {
+            attrs.className = "navbar-menu"
+            div {
+                attrs.className = "navbar-end"
+                div {
+                    attrs.className = "navbar-brand"
+                    a {
+                        attrs.className = "navbar-item"
+                        img {
+                            attrs.src = "images/logo.svg"
+                        }
                     }
                 }
             }
