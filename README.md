@@ -7,8 +7,7 @@ In order to run this application locally, execute the following command:
 ./gradlew browserDevelopmentRun --continuous
 ```
 
-The app will now open in your browser automatically. All requests to the backend api will be proxied to the localhost as 
-configured in webpack, where our backend service (if any) should be located.
+<sub>*The configuration for the development server can be found in the `webpack` folder.<sub>
 
 ## Production
 
@@ -28,9 +27,6 @@ docker build -t lorem-ipsum-ui:v1 .
 ```
 docker run -d -p 80:80 lorem-ipsum-ui:v1
 ```
-
-The app can now be found visiting <localhost:80>. Ingress routes are used to route the backend requests to their
-respective targets.
 
 ## Relevant Documentation
 
