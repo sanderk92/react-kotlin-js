@@ -1,4 +1,4 @@
-rootProject.name = "lorem-ipsum-ui"
+rootProject.name = "kotlin-js-react"
 
 pluginManagement {
     resolutionStrategy {
