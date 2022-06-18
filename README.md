@@ -30,13 +30,8 @@ docker run -d -p 80:80 lorem-ipsum-ui:v1
 
 ## Relevant Documentation
 
-- React
-  - [React API](https://reactjs.org/docs/react-api.html)
-- Kotlin-React 
-  - [Hands-on](https://play.kotlinlang.org/hands-on/Building%20Web%20Applications%20with%20React%20and%20Kotlin%20JS)
-  - [Example project](https://github.com/Kotlin/full-stack-web-jetbrains-night-sample)
-- Kotlin-Wrappers 
+  - [React](https://reactjs.org/docs/react-api.html)
+  - [Kotlin-JS](https://kotlinlang.org/docs/js-get-started.html)
   - [Github](https://github.com/JetBrains/kotlin-wrappers) 
   - [Maven](https://mvnrepository.com/artifact/org.jetbrains.kotlin-wrappers)
-- Bulma CSS
   - [Docs](https://bulma.io/documentation/)
