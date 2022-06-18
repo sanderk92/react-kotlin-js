@@ -22,7 +22,7 @@ val SideBar = fc<Props> {
                 +"My label"
             }
             li {
-                attrs.className = "menu-item px-2 py-1"
+                attrs.className = "menu-item py-1"
                 RouterLink {
                     attrs.path = "/"
                     attrs.value = "Home"
@@ -30,19 +30,27 @@ val SideBar = fc<Props> {
                 }
             }
             li {
-                attrs.className = "menu-item px-2 py-1"
+                attrs.className = "menu-item py-1"
                 RouterLink {
-                    attrs.path = "/unused1"
-                    attrs.value = "Unused"
-                    attrs.icon = "bx bx-chart"
+                    attrs.path = "/cards"
+                    attrs.value = "Cards"
+                    attrs.icon = "bx bx-card"
                 }
             }
             li {
-                attrs.className = "menu-item px-2 py-1"
+                attrs.className = "menu-item py-1"
                 RouterLink {
-                    attrs.path = "/unused2"
-                    attrs.value = "Unused"
-                    attrs.icon = "bx bx-battery"
+                    attrs.path = "/timeline"
+                    attrs.value = "Timeline"
+                    attrs.icon = "bx bx-time"
+                }
+            }
+            li {
+                attrs.className = "menu-item py-1"
+                RouterLink {
+                    attrs.path = "/input"
+                    attrs.value = "Input"
+                    attrs.icon = "bx bx-search"
                 }
             }
         }

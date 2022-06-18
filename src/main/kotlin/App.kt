@@ -1,5 +1,8 @@
 import kotlinx.browser.window
-import pages.IndexPage
+import pages.CardsPage
+import pages.HomePage
+import pages.InputPage
+import pages.TimelinePage
 import react.Props
 import react.createElement
 import react.dom.html.ReactHTML.a
@@ -43,7 +46,19 @@ val App = fc<Props> {
                 Routes {
                     Route {
                         attrs.path = "/"
-                        attrs.element = createElement(IndexPage)
+                        attrs.element = createElement(HomePage)
+                    }
+                    Route {
+                        attrs.path = "/cards"
+                        attrs.element = createElement(CardsPage)
+                    }
+                    Route {
+                        attrs.path = "/timeline"
+                        attrs.element = createElement(TimelinePage)
+                    }
+                    Route {
+                        attrs.path = "/input"
+                        attrs.element = createElement(InputPage)
                     }
                 }
             }
