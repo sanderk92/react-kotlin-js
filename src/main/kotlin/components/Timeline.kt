@@ -52,7 +52,7 @@ val Timeline = fc<TimelineProps> { props ->
 
         props.timelineItems.forEachIndexed { index, item ->
             div {
-                attrs.className = "timeline-item clickable grey-hover"
+                attrs.className = "timeline-item clickable grey-hover disable-select"
                 attrs.onClick = { openTimePoints = toggle(openTimePoints, index) }
                 div {
                     attrs.className = "timeline-marker is-icon clickable ${item.severity.className}"

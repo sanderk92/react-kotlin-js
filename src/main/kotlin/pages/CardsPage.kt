@@ -15,9 +15,10 @@ val CardsPage = fc<Props> {
         attrs.className = "container"
         div {
             attrs.className = "columns is-multiline"
-            repeat(15) {
+
+            repeat(10) {
                 div {
-                    attrs.className = "column is-one-third clickable hoverable"
+                    attrs.className = "column is-one-fifth"
                     Card {
                         attrs {
                             text = "Card text"

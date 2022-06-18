@@ -16,7 +16,7 @@ val TimelinePage = fc<Props> {
             attrs.className = "column is-one-third background-opaque card"
             Timeline {
                 attrs {
-                    timelineItems =listOf(
+                    timelineItems = listOf(
                         TimelineItem(
                             header = "DANGER",
                             details = "You should check it out!",

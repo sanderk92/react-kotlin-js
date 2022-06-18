@@ -43,7 +43,7 @@ val InputPage = fc<Props> {
                     attrs {
                         label = "Dropdown menu"
                         selected = dropDownSelection
-                        options = listOf("Option1", "Option2" , "Option3")
+                        options = listOf("Option 1", "Option 2" , "Option 3")
                         onSelect = {
                             dropDownSelection = it
                             toaster.info("Dropdown selected '$it'")
