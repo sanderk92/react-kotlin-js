@@ -21,11 +21,11 @@ perform the following steps:
 ```
 
 ```
-docker build -t lorem-ipsum-ui:v1 .
+docker build -t kotlin-js-react:v1 .
 ```
 
 ```
-docker run -d -p 80:80 lorem-ipsum-ui:v1
+docker run -d -p 80:80 kotlin-js-react:v1
 ```
 
 ## Relevant Documentation
