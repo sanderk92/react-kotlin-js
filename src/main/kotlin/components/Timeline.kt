@@ -3,6 +3,7 @@ package components
 import components.elements.BoxIcon
 import components.elements.BulmaColor
 import components.elements.BulmaSize
+import csstype.ClassName
 import react.Props
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.i
@@ -29,7 +30,7 @@ val Timeline = fc<TimelineProps> { props ->
     var openTimePoints: List<Int> by useState(emptyList())
 
     div {
-        attrs.className = "timeline"
+        attrs.className = ClassName("timeline")
 
         Button {
             attrs {
@@ -41,42 +42,42 @@ val Timeline = fc<TimelineProps> { props ->
         }
 
         div {
-            attrs.className = "timeline-header"
+            attrs.className = ClassName("timeline-header")
             span {
-                attrs.className = "is-icon is-large is-primary"
+                attrs.className = ClassName("is-icon is-large is-primary")
                 i {
-                    attrs.className = "bx bxs-downvote"
+                    attrs.className = ClassName("bx bxs-downvote")
                 }
             }
         }
 
         props.timelineItems.forEachIndexed { index, item ->
             div {
-                attrs.className = "timeline-item clickable grey-hover disable-select"
+                attrs.className = ClassName("timeline-item clickable grey-hover disable-select")
                 attrs.onClick = { openTimePoints = toggle(openTimePoints, index) }
                 div {
-                    attrs.className = "timeline-marker is-icon clickable ${item.severity.className}"
+                    attrs.className = ClassName("timeline-marker is-icon clickable ${item.severity.className}")
                     i {
                         attrs.className = item.icon.className
                     }
                 }
                 div {
-                    attrs.className = "timeline-content"
+                    attrs.className = ClassName("timeline-content")
                     div {
                         p {
-                            attrs.className = "heading break-word"
+                            attrs.className = ClassName("heading break-word")
                             +item.header
                         }
                         p {
-                            attrs.className = "break-word"
+                            attrs.className = ClassName("break-word")
                             +item.message
                         }
                     }
                     div {
                         attrs.hidden = !openTimePoints.contains(index)
-                        attrs.className = "message"
+                        attrs.className = ClassName("message")
                         pre {
-                            attrs.className = "message-body break-word"
+                            attrs.className = ClassName("message-body break-word")
                             +item.details
                         }
                     }

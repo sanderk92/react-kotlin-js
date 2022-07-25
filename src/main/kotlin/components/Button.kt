@@ -2,6 +2,7 @@ package components
 
 import components.elements.BulmaColor
 import components.elements.BulmaSize
+import csstype.ClassName
 import react.Props
 import react.dom.html.InputType
 import react.dom.html.ReactHTML.input
@@ -19,7 +20,7 @@ val Button = fc<ButtonProps> { props ->
     span {
         input {
             attrs {
-                className = "button is-outlined is-rounded ${props.color.className} ${props.size.className}"
+                className = ClassName("button is-outlined is-rounded ${props.color.className} ${props.size.className}")
                 type = InputType.button
                 value = props.value
                 onClick = { props.onPressed() }

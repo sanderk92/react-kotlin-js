@@ -1,5 +1,6 @@
 package components
 
+import csstype.ClassName
 import react.Props
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.figure
@@ -14,9 +15,9 @@ external interface CardProps : Props {
 val Card = fc<CardProps> { props ->
 
     div {
-        attrs.className = "card opaque-hover clickable"
+        attrs.className = ClassName("card opaque-hover clickable")
         div {
-            attrs.className = "card-image"
+            attrs.className = ClassName("card-image")
             figure {
                 img {
                     attrs.src = props.imageSrc
@@ -24,7 +25,7 @@ val Card = fc<CardProps> { props ->
             }
         }
         div {
-            attrs.className = "card-content"
+            attrs.className = ClassName("card-content")
             +props.text
         }
     }

@@ -1,5 +1,6 @@
 package components
 
+import csstype.ClassName
 import react.Props
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.label
@@ -25,12 +26,12 @@ val Dropdown = fc<DropdownProps> { props ->
     }
 
     div {
-        attrs.className = "select is-rounded full-width ${loadingClassFrom(props)}"
+        attrs.className = ClassName("select is-rounded full-width ${loadingClassFrom(props)}")
 
         select {
             attrs {
                 id = props.label
-                className = "full-width"
+                className = ClassName("full-width")
                 disabled = props.isDisabled
                 value = props.selected
                 onChange = { props.onSelect(it.target.value) }

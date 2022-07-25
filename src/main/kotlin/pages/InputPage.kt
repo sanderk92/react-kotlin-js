@@ -5,6 +5,7 @@ import components.*
 import components.elements.BoxIcon
 import components.elements.BulmaColor
 import components.elements.BulmaSize
+import csstype.ClassName
 import react.Props
 import react.dom.html.ReactHTML.div
 import react.fc
@@ -20,12 +21,12 @@ val InputPage = fc<Props> {
     var dropDownSelection by useState("")
 
     div {
-        attrs.className = "columns is-centered"
+        attrs.className = ClassName("columns is-centered")
         div {
-            attrs.className = "column box is-narrow has-text-centered"
+            attrs.className = ClassName("column box is-narrow has-text-centered")
 
             div {
-                attrs.className = "p-4"
+                attrs.className = ClassName("p-4")
                 DatePicker {
                     attrs {
                         label = "Date picker"
@@ -39,7 +40,7 @@ val InputPage = fc<Props> {
             }
 
             div {
-                attrs.className = "p-4"
+                attrs.className = ClassName("p-4")
                 Dropdown {
                     attrs {
                         label = "Dropdown menu"
@@ -54,7 +55,7 @@ val InputPage = fc<Props> {
             }
 
             div {
-                attrs.className = "p-4"
+                attrs.className = ClassName("p-4")
                 Button {
                     attrs {
                         value = "Button"

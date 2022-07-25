@@ -2,8 +2,10 @@ import adapters.module
 import kotlinext.js.require
 import kotlinx.browser.document
 import org.w3c.dom.Element
+import react.Props
 import react.createElement
-import react.dom.render
+import react.dom.client.Root
+import react.dom.client.createRoot
 
 fun main() {
     importCssFiles()
@@ -12,10 +14,13 @@ fun main() {
         it.accept()
     }
 
-    render(
-        element = createElement { child(ErrorBoundary::class) { child(App) } },
-        container = getRootElement().also { document.body!!.appendChild(it) }
-    )
+    val element = createElement<Props> {
+        child(ErrorBoundary::class) {
+            child(App)
+        }
+    }
+
+    getRoot().render(element)
 }
 
 private fun importCssFiles() {
@@ -30,10 +35,13 @@ private fun importCssFiles() {
     require("awesome-notifications/dist/style.css")
 }
 
-private fun getRootElement(): Element =
-    document.getElementById("root") ?: createRootElement()
+private fun getRoot(): Root {
+    val element = document.getElementById("root") ?: createRootDiv()
+    document.body?.appendChild(element)
+    return createRoot(element)
+}
 
-private fun createRootElement(): Element {
+private fun createRootDiv(): Element {
     val element = document.createElement("div")
     element.id = "root"
     return element

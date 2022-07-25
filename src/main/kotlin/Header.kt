@@ -1,3 +1,4 @@
+import csstype.ClassName
 import react.Props
 import react.dom.html.ReactHTML
 import react.dom.html.ReactHTML.a
@@ -15,30 +16,30 @@ external interface HeaderProps : Props {
 
 val Header = fc<HeaderProps> { props ->
     nav {
-        attrs.className = "navbar is-dark"
+        attrs.className = ClassName("navbar is-dark")
 
         div {
-            attrs.className = "navbar-item"
+            attrs.className = ClassName("navbar-item")
             button {
-                attrs.className = "button is-dark is-rounded"
+                attrs.className = ClassName("button is-dark is-rounded")
                 attrs.onClick = { props.onBurgerClick() }
                 a {
-                    attrs.className = "icon mx-1 has-text-light"
+                    attrs.className = ClassName("icon mx-1 has-text-light")
                     i {
-                        attrs.className = if (props.sideBarOpen) "bx bx-x" else "bx bx-menu"
+                        attrs.className = if (props.sideBarOpen) ClassName("bx bx-x") else ClassName("bx bx-menu")
                     }
                 }
             }
         }
 
         div {
-            attrs.className = "navbar-menu"
+            attrs.className = ClassName("navbar-menu")
             div {
-                attrs.className = "navbar-end"
+                attrs.className = ClassName("navbar-end")
                 div {
-                    attrs.className = "navbar-brand"
+                    attrs.className = ClassName("navbar-brand")
                     a {
-                        attrs.className = "navbar-item"
+                        attrs.className = ClassName("navbar-item")
                         img {
                             attrs.src = "images/logo.svg"
                         }

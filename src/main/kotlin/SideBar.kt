@@ -1,3 +1,4 @@
+import csstype.ClassName
 import react.Props
 import react.dom.html.ReactHTML.div
 import react.dom.html.ReactHTML.i
@@ -12,17 +13,17 @@ import react.router.useLocation
 val SideBar = fc<Props> {
 
     div {
-        attrs.className = "menu"
+        attrs.className = ClassName("menu")
 
         ul {
-            attrs.className = "menu-list mt-5"
+            attrs.className = ClassName("menu-list mt-5")
 
             p {
-                attrs.className = "menu-label p-1 has-text-dark"
+                attrs.className = ClassName("menu-label p-1 has-text-dark")
                 +"My label"
             }
             li {
-                attrs.className = "menu-item py-1"
+                attrs.className = ClassName("menu-item py-1")
                 RouterLink {
                     attrs.path = "/"
                     attrs.value = "Home"
@@ -30,7 +31,7 @@ val SideBar = fc<Props> {
                 }
             }
             li {
-                attrs.className = "menu-item py-1"
+                attrs.className = ClassName("menu-item py-1")
                 RouterLink {
                     attrs.path = "/timeline"
                     attrs.value = "Timeline"
@@ -38,7 +39,7 @@ val SideBar = fc<Props> {
                 }
             }
             li {
-                attrs.className = "menu-item py-1"
+                attrs.className = ClassName("menu-item py-1")
                 RouterLink {
                     attrs.path = "/input"
                     attrs.value = "Input"
@@ -46,7 +47,7 @@ val SideBar = fc<Props> {
                 }
             }
             li {
-                attrs.className = "menu-item py-1"
+                attrs.className = ClassName("menu-item py-1")
                 RouterLink {
                     attrs.path = "/cards"
                     attrs.value = "Cards"
@@ -67,13 +68,13 @@ private val RouterLink = fc<RouterLinkProps> { props ->
     Link {
         attrs.to = props.path
         if (props.path == useLocation().pathname) {
-            attrs.className = "is-active"
+            attrs.className = ClassName("is-active")
         }
 
         span {
-            attrs.className = "icon mx-1"
+            attrs.className = ClassName("icon mx-1")
             i {
-                attrs.className = props.icon
+                attrs.className = ClassName(props.icon)
             }
         }
         +props.value

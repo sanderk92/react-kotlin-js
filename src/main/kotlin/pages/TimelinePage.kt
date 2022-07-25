@@ -4,6 +4,7 @@ import components.Timeline
 import components.TimelineItem
 import components.elements.BoxIcon
 import components.elements.BulmaColor
+import csstype.ClassName
 import react.Props
 import react.dom.html.ReactHTML.div
 import react.fc
@@ -11,9 +12,9 @@ import react.fc
 val TimelinePage = fc<Props> {
 
     div {
-        attrs.className = "columns is-centered "
+        attrs.className = ClassName("columns is-centered")
         div {
-            attrs.className = "column box is-two-thirds"
+            attrs.className = ClassName("column box is-two-thirds")
             div {
                 Timeline {
                     attrs {

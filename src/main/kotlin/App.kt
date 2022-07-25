@@ -1,3 +1,4 @@
+import csstype.ClassName
 import kotlinx.browser.window
 import pages.CardsPage
 import pages.HomePage
@@ -36,7 +37,7 @@ val App = fc<Props> {
 
             aside {
                 attrs.id = "sidebar"
-                attrs.className = if (sideBarOpen) "sidebar-open" else "sidebar-closed"
+                attrs.className = if (sideBarOpen) ClassName("sidebar-open") else ClassName("sidebar-closed")
                 child(SideBar)
             }
 
@@ -66,7 +67,7 @@ val App = fc<Props> {
         }
         footer {
             attrs.id = "footer"
-            attrs.className = "footer has-text-centered"
+            attrs.className = ClassName("footer has-text-centered")
             a {
                 img {
                     attrs.src = "images/logo.svg"

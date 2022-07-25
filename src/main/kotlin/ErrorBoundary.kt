@@ -1,3 +1,4 @@
+import csstype.ClassName
 import history.createBrowserHistory
 import kotlinx.css.*
 import kotlinx.html.js.onClickFunction
@@ -40,9 +41,9 @@ class ErrorBoundary : RComponent<PropsWithChildren, ErrorBoundaryState>() {
                 }
 
                 div {
-                    attrs.className = "icon is-large"
+                    attrs.className = ClassName("icon is-large")
                     i {
-                        attrs.className = "bx bx-lg bx-error has-text-danger"
+                        attrs.className = ClassName("bx bx-lg bx-error has-text-danger")
                     }
                 }
 

@@ -1,6 +1,7 @@
 package pages
 
 import components.Card
+import csstype.ClassName
 import react.Props
 import react.dom.html.ReactHTML
 import react.dom.html.ReactHTML.div
@@ -12,13 +13,13 @@ import react.fc
 val CardsPage = fc<Props> {
 
     div {
-        attrs.className = "container"
+        attrs.className = ClassName("container")
         div {
-            attrs.className = "columns is-multiline"
+            attrs.className = ClassName("columns is-multiline")
 
             repeat(10) {
                 div {
-                    attrs.className = "column is-one-fifth"
+                    attrs.className = ClassName("column is-one-fifth")
                     Card {
                         attrs {
                             text = "Card text"

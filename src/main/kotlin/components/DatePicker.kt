@@ -1,5 +1,6 @@
 package components
 
+import csstype.ClassName
 import extensions.toUtcISoDateString
 import react.Props
 import react.dom.html.InputType
@@ -25,7 +26,7 @@ val DatePicker = fc<DatePickerProps> { props ->
     input {
         attrs {
             id = props.label
-            className = "input is-rounded"
+            className = ClassName("input is-rounded")
             type = InputType.date
             defaultValue = props.initialDate.toUtcISoDateString()
             required = true
